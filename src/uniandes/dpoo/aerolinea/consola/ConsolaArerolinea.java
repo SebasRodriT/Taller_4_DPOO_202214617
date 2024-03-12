@@ -13,8 +13,10 @@ public class ConsolaArerolinea extends ConsolaBasica
 
     /**
      * Es un método que corre la aplicación y realmente no hace nada interesante: sólo muestra cómo se podría utilizar la clase Aerolínea para hacer pruebas.
+     * @throws uniandes.dpoo.aerolinea.modelo.Aerolinea.InformacionInconsistenteException 
+     * @throws uniandes.dpoo.aerolinea.modelo.Aerolinea.TipoInvalidoException 
      */
-    public void correrAplicacion( )
+    public void correrAplicacion( ) throws uniandes.dpoo.aerolinea.modelo.Aerolinea.TipoInvalidoException, uniandes.dpoo.aerolinea.modelo.Aerolinea.InformacionInconsistenteException
     {
         try
         {
@@ -37,7 +39,7 @@ public class ConsolaArerolinea extends ConsolaBasica
         }
     }
 
-    public static void main( String[] args )
+    public static void main( String[] args ) throws uniandes.dpoo.aerolinea.modelo.Aerolinea.TipoInvalidoException, uniandes.dpoo.aerolinea.modelo.Aerolinea.InformacionInconsistenteException
     {
         ConsolaArerolinea ca = new ConsolaArerolinea( );
         ca.correrAplicacion( );

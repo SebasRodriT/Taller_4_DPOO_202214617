@@ -9,22 +9,25 @@ public class ClienteNatural extends Cliente {
 	public static String NATURAL = "Natural";
 	private String nombre;
 	
+	public ClienteNatural(String nombre) {
+		this.nombre = nombre;
+		
+	}
+	
 	@Override
 	public String getIdentificador() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub AYUDA
 		return null;
 	}
 
 	@Override
 	public String getTipoCliente() {
 		// TODO Auto-generated method stub
-		return null;
+		return NATURAL;
 	}
 
 	
-	public ClienteNatural(String nombre) {
-		
-	}
+	
 
 	
 	

@@ -9,6 +9,8 @@ public class Avion extends java.lang.Object {
 	 private int capacidad;
 	 
 	 public Avion(String nombre, int capacidad) {
+		 this.nombre = nombre;
+		 this.capacidad = capacidad;
 		 
 	 }
 

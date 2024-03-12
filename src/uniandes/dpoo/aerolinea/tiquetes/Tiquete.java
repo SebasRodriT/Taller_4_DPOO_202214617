@@ -8,12 +8,17 @@ import uniandes.dpoo.aerolinea.modelo.cliente.Cliente;
  * Después de que se haya realizado el vuelo, el tiquete debe quedar marcado como usado.
  */
 
-public class Tiquete {
+public class Tiquete extends java.lang.Object {
 	private String codigo;
 	private int tarifa;
 	private boolean usado;
+	private Vuelo vuelo;
+	private Cliente clienteComprador;
 	
 	public Tiquete(String codigo, Vuelo vuelo, Cliente clienteComprador, int tarifa) {
+		this.codigo = codigo;
+		this.clienteComprador = clienteComprador;
+		this.tarifa = tarifa;
 	}
 	
 	public Cliente getCliente( ) {
@@ -21,9 +26,9 @@ public class Tiquete {
 	}
 	
 	public Vuelo getVuelo() {
-		return vuelo;	
+		return vuelo;
 	}
-	
+
 	public String getCodigo() {
 		return codigo;
 	}
@@ -33,10 +38,11 @@ public class Tiquete {
 	}
 	
 	public void marcarComoUsado() {
+		 this.usado = true;
 	}
 	
 	public boolean esUsado() {
-		return true;
+		return usado;
 	}
 	
 	
